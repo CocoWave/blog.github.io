@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/blog.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/blog.github.io/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="js," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog.github.io/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="基础语法运算符 逗号表达式的值是最后一个式子的值，而逗号前面的表达式仅仅是为了执行一下; 1234var num1 = 10;var num2 = 20;var res = (num1++  , ++num2 , num1 + num2 );console.log(res);//32  短路问题 1234567逻辑与  &amp;amp;&amp;amp;  并且  and    有假就是假，全真才是真。短路问题">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js基础">
+<meta property="og:url" content="https://github.com/Wavedot/blog.github.io/2017/08/14/js基础总结/index.html">
+<meta property="og:site_name" content="一方水土">
+<meta property="og:description" content="基础语法运算符 逗号表达式的值是最后一个式子的值，而逗号前面的表达式仅仅是为了执行一下; 1234var num1 = 10;var num2 = 20;var res = (num1++  , ++num2 , num1 + num2 );console.log(res);//32  短路问题 1234567逻辑与  &amp;amp;&amp;amp;  并且  and    有假就是假，全真才是真。短路问题">
+<meta property="og:updated_time" content="2017-08-14T06:11:17.893Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js基础">
+<meta name="twitter:description" content="基础语法运算符 逗号表达式的值是最后一个式子的值，而逗号前面的表达式仅仅是为了执行一下; 1234var num1 = 10;var num2 = 20;var res = (num1++  , ++num2 , num1 + num2 );console.log(res);//32  短路问题 1234567逻辑与  &amp;amp;&amp;amp;  并且  and    有假就是假，全真才是真。短路问题">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog.github.io/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/Wavedot/blog.github.io/2017/08/14/js基础总结/"/>
+
+
+
+
+
+  <title>js基础 | 一方水土</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog.github.io/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">一方水土</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog.github.io/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Wavedot/blog.github.io/blog.github.io/2017/08/14/js基础总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wave">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一方水土">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-14T14:07:48+08:00">
+                2017-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog.github.io/categories/learn/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><ol>
+<li><p>逗号表达式的值是最后一个式子的值，而逗号前面的表达式仅仅是为了执行一下;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> num2 = <span class="number">20</span>;</div><div class="line"><span class="keyword">var</span> res = (num1++  , ++num2 , num1 + num2 );</div><div class="line"><span class="built_in">console</span>.log(res);<span class="comment">//32</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>短路问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">逻辑与  &amp;&amp;  并且  and    有假就是假，全真才是真。</div><div class="line">短路问题:如果逻辑与左边的式子可以转换成false，那么整个逻辑与表达式的值就是第一个式子的值，第二个式子根本就不会运算。</div><div class="line">		  如果逻辑与左边的式子不能转换false，那么整个逻辑与表达式的值就是第二个式子的值，不管第二个式子是什么.</div><div class="line">逻辑或  ||  或者  or     有真就是真，全假才是假。</div><div class="line">        如果逻辑或左边的式子可以转换成true，那么整个逻辑或表达式的值就是第一个式子的值，第二个式子根本就不会运算。</div><div class="line">        如果逻辑或左边的式子不能转成true，那么整个逻辑或表达式的值就是第二个式子的值，不管第二个式子是什么。</div><div class="line">逻辑非  !   取反  not    真-假   假-真</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><ol>
+<li>数组的去重(多种方法)</li>
+</ol>
+<h4 id="检测数据类型的方式"><a href="#检测数据类型的方式" class="headerlink" title="检测数据类型的方式"></a>检测数据类型的方式</h4><ol>
+<li><p>typeof   能检测 string 、 number 、 boolean 、 undefined  和 function。</p>
+</li>
+<li><p>Array.isArray(数组名);  //如果此时检测的这个arr确实是一个数组，那么就得到一个true。</p>
+</li>
+<li><p>数组名 instanceof Array/Function ;//如果这个检测的数组arr确实是一个数组，那么就会得到一个true。</p>
+</li>
+<li><p>Object.prototype.toString.call(数组名);//这种方式可以检测任意的类型。</p>
+<p>console.log(Object.prototype.toString.call(null)); //“[object Null]”</p>
+</li>
+</ol>
+<h4 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h4><ol>
+<li>选择排序</li>
+<li>快速排序</li>
+<li>冒泡排序</li>
+</ol>
+<h4 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h4><p>形参和实参</p>
+<p>arguments是一个伪数组，他里面存放的是参数的值。</p>
+<p>作用:</p>
+<pre><code>a.在js中，如果声明函数名字一样，那么后面的函数会把前面的函数给覆盖掉。
+ b.js中没有重载
+ c.arguments可以模拟重载。
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">     <span class="keyword">if</span>(<span class="built_in">arguments</span>.length == <span class="number">1</span>)&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="string">"实现功能1"</span>);</div><div class="line">     &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">arguments</span>.length == <span class="number">2</span>)&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="string">"实现功能2"</span>);</div><div class="line">     &#125;<span class="keyword">else</span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="string">"实现功能3"</span>);</div><div class="line">     &#125;</div><div class="line">   &#125;</div><div class="line">   test(<span class="number">10</span>,<span class="number">20</span>);</div></pre></td></tr></table></figure>
+<h4 id="new关键字"><a href="#new关键字" class="headerlink" title="new关键字"></a>new关键字</h4><p>​     a.帮我们创建了一个对象。<br>      b.把this关键字指向当前这个创建的对象。<br>      c.为这个创建的对象设置属性。<br>      d.帮我们把这个创建好的对象返回了</p>
+<h4 id="构造函数的return问题"><a href="#构造函数的return问题" class="headerlink" title="构造函数的return问题"></a>构造函数的return问题</h4><p>如果在构造函数中，有返回值，返回的是基本数据类型，那么没有什么用。</p>
+<p>如果在构造函数中，有返回值，返回的是复杂数据类型，那么这个返回值会把new关键字创建出来的对象给覆盖掉。</p>
+<h4 id="能力检测"><a href="#能力检测" class="headerlink" title="能力检测"></a>能力检测</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">//写一个函数，获取元素文本</span></div><div class="line">   <span class="function"><span class="keyword">function</span> <span class="title">getText</span>(<span class="params">ele</span>)</span>&#123;<span class="comment">//能力检测-判断执行这个代码的浏览器支持不支持这个东西。</span></div><div class="line">     <span class="keyword">if</span>(<span class="keyword">typeof</span> ele.textContent == <span class="string">"string"</span>)&#123;</div><div class="line">       <span class="keyword">return</span> ele.textContent;</div><div class="line">     &#125;<span class="keyword">else</span> &#123;</div><div class="line">       <span class="keyword">return</span> ele.innerText;</div><div class="line">     &#125;</div><div class="line">   &#125;</div><div class="line"><span class="comment">//  console.log(getText(box));</span></div><div class="line">  <span class="comment">//写一个函数，设置元素的文本</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">setText</span>(<span class="params">ele,text</span>)</span>&#123;</div><div class="line">    <span class="comment">//能力检测</span></div><div class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> ele.textContent == <span class="string">"string"</span>)&#123;</div><div class="line">      ele.textContent = text;</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">      ele.innerText = text;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"><span class="comment">//封装一个函数，得到下一个元素节点。</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getNextElement</span>(<span class="params">ele</span>)</span>&#123;</div><div class="line">  <span class="comment">//做能力检测-判断执行这个代码的浏览器支不支持这个方法。</span></div><div class="line">  <span class="keyword">if</span>(ele.nextElementSibling)&#123;</div><div class="line">    <span class="keyword">return</span> ele.nextElementSibling;</div><div class="line">  &#125;<span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">//如果进到这里来了，说明这个浏览器不支持nextElementSibling，比如ie8</span></div><div class="line">    <span class="keyword">var</span> node = ele.nextSibling;</div><div class="line">    <span class="keyword">while</span>(node.nodeType != <span class="number">1</span>)&#123;</div><div class="line">      node = node.nextSibling</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> node;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//封装一个函数，做获取上一个元素节点的兼容处理</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPreviousElement</span>(<span class="params">ele</span>)</span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">//能力检测</span></div><div class="line">  <span class="keyword">if</span>(ele.previousElementSibling)&#123;</div><div class="line">    <span class="keyword">return</span> ele.previousElementSibling;</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="keyword">var</span> node = ele.previousSibling;</div><div class="line">    <span class="keyword">while</span>(node.nodeType != <span class="number">1</span>)&#123;</div><div class="line">      node = node.previousSibling</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> node;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//封装一个函数，获取元素的第一个子元素节点</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFirstElement</span>(<span class="params">ele</span>)</span>&#123;</div><div class="line">  <span class="comment">//能力检测</span></div><div class="line">  <span class="keyword">if</span>(ele.firstElementChild)&#123;</div><div class="line">    <span class="keyword">return</span> ele.firstElementChild;</div><div class="line">  &#125;<span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">var</span> node = ele.firstChild;</div><div class="line">    <span class="keyword">while</span>(node.nodeType != <span class="number">1</span>)&#123;</div><div class="line">      node = node.nextSibling;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> node;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//封装成一个函数，获取元素的最后一个 元素子节点</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLastElement</span>(<span class="params">ele</span>)</span>&#123;</div><div class="line">  <span class="comment">//能力检测</span></div><div class="line">  <span class="keyword">if</span>(ele.lastElementChild)&#123;</div><div class="line">    <span class="keyword">return</span> ele.lastElementChild</div><div class="line">  &#125;<span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">var</span>  node = ele.lastChild;</div><div class="line">    <span class="keyword">while</span>(node.nodeType != <span class="number">1</span>)&#123;</div><div class="line">      node = node.previousSibling;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> node;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="特效中容易混淆的知识点"><a href="#特效中容易混淆的知识点" class="headerlink" title="特效中容易混淆的知识点"></a>特效中容易混淆的知识点</h4><ol>
+<li><p>offset系列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//offsetWidth和offsetHeight: 检测盒子的宽高;</div><div class="line">//offsetWidth = width+padding+border;</div><div class="line">//offset检测盒子的宽高包括:宽/高+padding+border;</div><div class="line">//offsetTop和offsetLeft:检测盒子距离父系盒子中带有定位(这里的定位包括absolute,relative,fixed)的盒子的距离!//检测top值和left值;(子绝父相)</div><div class="line">         			 //如果都没有,以浏览器页面为基准!    //检测盒子,距离整个页面的距离</div><div class="line">//offsetParent: 检测盒子的父系盒子中带有定位的盒子(要的是盒子,是节点)!</div><div class="line">                  //如果都没有,以body为基准!</div></pre></td></tr></table></figure>
+<p>和style.left的区别:</p>
+<p>​     一、最大区别在于offsetLeft可以返回没有定位盒子的距离左侧的位置。而style.left不可以<br>​     二、offsetleft 返回的是数字，而 style.left 返回的是字符串，除了数字外还带有单位：px。</p>
+<p>​     三、offsetleft 只读，而 style.left 可读写。（只读是获取值，可写是赋值）<br>​     四、如果没有给 HTML 元素指定过 left 样式，则style.left 返回的是空字符串。</p>
+<p>总结:</p>
+<pre><code>1.style.left/top 用来赋值;一般不用他获取值;
+2.offsetLeft/Top 用来获取值,(1.子绝父相获取left和top值)
+3.offsetLeft/Top 用来获取值,(2.获取盒子距离整个页面的距离)
+</code></pre></li>
+<li><p>匀速动画</p>
+</li>
+<li><p>scroll系列</p>
+</li>
+<li><p>缓动动画</p>
+</li>
+<li><p>事件</p>
+</li>
+<li><p>client系列</p>
+</li>
+<li><p>正则表达式</p>
+<p>​</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog.github.io/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog.github.io/2017/08/14/jQuery/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog.github.io/2017/08/14/this的含义及沙箱模式/" rel="prev" title="js高级">
+                js高级 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/blog.github.io/images/avatar.gif"
+               alt="wave" />
+          <p class="site-author-name" itemprop="name">wave</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/blog.github.io/archives/">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/blog.github.io/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/blog.github.io/tags/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础语法"><span class="nav-number">1.</span> <span class="nav-text">基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#运算符"><span class="nav-number">1.0.1.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组"><span class="nav-number">1.0.2.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检测数据类型的方式"><span class="nav-number">1.0.3.</span> <span class="nav-text">检测数据类型的方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序算法"><span class="nav-number">1.0.4.</span> <span class="nav-text">排序算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#arguments"><span class="nav-number">1.0.5.</span> <span class="nav-text">arguments</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#new关键字"><span class="nav-number">1.0.6.</span> <span class="nav-text">new关键字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数的return问题"><span class="nav-number">1.0.7.</span> <span class="nav-text">构造函数的return问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#能力检测"><span class="nav-number">1.0.8.</span> <span class="nav-text">能力检测</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特效中容易混淆的知识点"><span class="nav-number">1.0.9.</span> <span class="nav-text">特效中容易混淆的知识点</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wave</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/blog.github.io/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/blog.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/blog.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/blog.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/blog.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/blog.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/blog.github.io/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/blog.github.io/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog.github.io/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/blog.github.io/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog.github.io/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/blog.github.io/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog.github.io/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
