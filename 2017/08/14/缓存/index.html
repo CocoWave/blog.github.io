@@ -38,7 +38,7 @@
 
   
   
-  <link href="/blog.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/root/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -72,44 +72,45 @@
 
 
 
-<link href="/blog.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/root/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/blog.github.io/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+<link href="/root/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="js高级," />
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/blog.github.io/favicon.ico?v=5.1.1" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/root/favicon.ico?v=5.1.1" />
 
 
 
 
 
 
-<meta name="description" content="javascrite第五天缓存（cache） 缓存分为软件缓存、硬件缓存，有大小限制，超过了限制，把之前缓存的东西挤出去、删除; 作用：提升运行速度;  缓存机制的封装实现实现步骤  创建对象、提供读写功能 容量限制策略 优化封装 对比jQuery的缓存机制  1234567891011121314function creatCache_01()&amp;#123;  var cache = &amp;#123;">
+<meta name="description" content="缓存（cache） 缓存分为软件缓存、硬件缓存，有大小限制，超过了限制，把之前缓存的东西挤出去、删除; 作用：提升运行速度;  缓存机制的封装实现实现步骤  创建对象、提供读写功能 容量限制策略 优化封装 对比jQuery的缓存机制  1234567891011121314function creatCache_01()&amp;#123;  var cache = &amp;#123;&amp;#125;;  func">
+<meta name="keywords" content="js高级">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一方水土">
-<meta property="og:url" content="https://github.com/Wavedot/blog.github.io/2017/08/14/缓存/index.html">
+<meta property="og:title" content="js高级">
+<meta property="og:url" content="http://alitter.xin/root/2017/08/14/缓存/index.html">
 <meta property="og:site_name" content="一方水土">
-<meta property="og:description" content="javascrite第五天缓存（cache） 缓存分为软件缓存、硬件缓存，有大小限制，超过了限制，把之前缓存的东西挤出去、删除; 作用：提升运行速度;  缓存机制的封装实现实现步骤  创建对象、提供读写功能 容量限制策略 优化封装 对比jQuery的缓存机制  1234567891011121314function creatCache_01()&amp;#123;  var cache = &amp;#123;">
-<meta property="og:updated_time" content="2017-07-29T11:04:24.935Z">
+<meta property="og:description" content="缓存（cache） 缓存分为软件缓存、硬件缓存，有大小限制，超过了限制，把之前缓存的东西挤出去、删除; 作用：提升运行速度;  缓存机制的封装实现实现步骤  创建对象、提供读写功能 容量限制策略 优化封装 对比jQuery的缓存机制  1234567891011121314function creatCache_01()&amp;#123;  var cache = &amp;#123;&amp;#125;;  func">
+<meta property="og:updated_time" content="2017-09-01T08:03:44.026Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一方水土">
-<meta name="twitter:description" content="javascrite第五天缓存（cache） 缓存分为软件缓存、硬件缓存，有大小限制，超过了限制，把之前缓存的东西挤出去、删除; 作用：提升运行速度;  缓存机制的封装实现实现步骤  创建对象、提供读写功能 容量限制策略 优化封装 对比jQuery的缓存机制  1234567891011121314function creatCache_01()&amp;#123;  var cache = &amp;#123;">
+<meta name="twitter:title" content="js高级">
+<meta name="twitter:description" content="缓存（cache） 缓存分为软件缓存、硬件缓存，有大小限制，超过了限制，把之前缓存的东西挤出去、删除; 作用：提升运行速度;  缓存机制的封装实现实现步骤  创建对象、提供读写功能 容量限制策略 优化封装 对比jQuery的缓存机制  1234567891011121314function creatCache_01()&amp;#123;  var cache = &amp;#123;&amp;#125;;  func">
 
 
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/blog.github.io/',
+    root: '/root/',
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/Wavedot/blog.github.io/2017/08/14/缓存/"/>
+  <link rel="canonical" href="http://alitter.xin/root/2017/08/14/缓存/"/>
 
 
 
 
 
-  <title> | 一方水土</title>
+  <title>js高级 | 一方水土</title>
   
 
 
@@ -170,7 +171,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/blog.github.io/"  class="brand" rel="start">
+      <a href="/root/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">一方水土</span>
         <span class="logo-line-after"><i></i></span>
@@ -198,7 +199,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/blog.github.io/" rel="section">
+          <a href="/root/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -208,7 +209,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/blog.github.io/categories/" rel="section">
+          <a href="/root/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -218,7 +219,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/blog.github.io/about/" rel="section">
+          <a href="/root/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -228,7 +229,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/blog.github.io/archives/" rel="section">
+          <a href="/root/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -238,7 +239,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/blog.github.io/tags/" rel="section">
+          <a href="/root/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -275,12 +276,12 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Wavedot/blog.github.io/blog.github.io/2017/08/14/缓存/">
+    <link itemprop="mainEntityOfPage" href="http://alitter.xin/root/root/2017/08/14/缓存/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wave">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog.github.io/images/avatar.gif">
+      <meta itemprop="image" content="/root/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -292,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">js高级</h1>
         
 
         <div class="post-meta">
@@ -314,6 +315,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/root/categories/learn/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -339,7 +362,7 @@
       
 
       
-        <h1 id="javascrite第五天"><a href="#javascrite第五天" class="headerlink" title="javascrite第五天"></a>javascrite第五天</h1><h2 id="缓存（cache）"><a href="#缓存（cache）" class="headerlink" title="缓存（cache）"></a>缓存（cache）</h2><blockquote>
+        <h2 id="缓存（cache）"><a href="#缓存（cache）" class="headerlink" title="缓存（cache）"></a>缓存（cache）</h2><blockquote>
 <p>缓存分为软件缓存、硬件缓存，有大小限制，超过了限制，把之前缓存的东西挤出去、删除;</p>
 <p>作用：提升运行速度;</p>
 </blockquote>
@@ -381,6 +404,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/root/tags/js高级/" rel="tag"># js高级</a>
+          
+        </div>
+      
 
       
       
@@ -390,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog.github.io/2017/08/14/递归/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/root/2017/08/14/递归/" rel="next" title="递归">
+                <i class="fa fa-chevron-left"></i> 递归
               </a>
             
           </div>
@@ -459,7 +488,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/blog.github.io/images/avatar.gif"
+               src="/root/images/avatar.gif"
                alt="wave" />
           <p class="site-author-name" itemprop="name">wave</p>
            
@@ -470,7 +499,7 @@
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/blog.github.io/archives/">
+              <a href="/root/archives/">
                 <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
@@ -481,7 +510,7 @@
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/blog.github.io/categories/index.html">
+              <a href="/root/categories/index.html">
                 <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
@@ -492,8 +521,8 @@
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/blog.github.io/tags/index.html">
-                <span class="site-state-item-count">3</span>
+              <a href="/root/tags/index.html">
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -528,7 +557,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascrite第五天"><span class="nav-number">1.</span> <span class="nav-text">javascrite第五天</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存（cache）"><span class="nav-number">1.1.</span> <span class="nav-text">缓存（cache）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存机制的封装实现"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">缓存机制的封装实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决斐波拉契数列的计算问题"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">解决斐波拉契数列的计算问题</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存（cache）"><span class="nav-number">1.</span> <span class="nav-text">缓存（cache）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存机制的封装实现"><span class="nav-number">1.0.1.</span> <span class="nav-text">缓存机制的封装实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决斐波拉契数列的计算问题"><span class="nav-number">1.0.2.</span> <span class="nav-text">解决斐波拉契数列的计算问题</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -616,53 +645,53 @@
 
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/root/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/root/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/root/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/root/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/root/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/blog.github.io/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/blog.github.io/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/blog.github.io/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/blog.github.io/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
-
-  
-  <script type="text/javascript" src="/blog.github.io/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/blog.github.io/js/src/post-details.js?v=5.1.1"></script>
-
+  <script type="text/javascript" src="/root/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/blog.github.io/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/root/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/root/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/root/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/root/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/root/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/root/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/root/js/src/bootstrap.js?v=5.1.1"></script>
 
 
 

@@ -38,7 +38,7 @@
 
   
   
-  <link href="/blog.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/root/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -72,44 +72,45 @@
 
 
 
-<link href="/blog.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/root/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/blog.github.io/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+<link href="/root/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="js," />
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/blog.github.io/favicon.ico?v=5.1.1" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/root/favicon.ico?v=5.1.1" />
 
 
 
 
 
 
-<meta name="description" content="javascrite第五天闭包闭包是什么? 封闭起来的包裹； 一个具有封闭的对外不公开的, 包裹结构, 或空间.     123function fn1()&amp;#123;  function fn2()&amp;#123;&amp;#125;&amp;#125; 闭包能用来干什么？ 1.延长变量的生命周期； 2.变量的封装，对外提供有限的访问、修改 ；权限（避免肆意的修改）；  闭包存在的问题 由于延长了变量的生命周期(没">
+<meta name="description" content="闭包闭包是什么? 封闭起来的包裹； 一个具有封闭的对外不公开的, 包裹结构, 或空间.     123function fn1()&amp;#123;  function fn2()&amp;#123;&amp;#125;&amp;#125; 闭包能用来干什么？ 1.延长变量的生命周期； 2.变量的封装，对外提供有限的访问、修改 ；权限（避免肆意的修改）；  闭包存在的问题 由于延长了变量的生命周期(没有被及时回收);造成了内存">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一方水土">
-<meta property="og:url" content="https://github.com/Wavedot/blog.github.io/2017/08/14/闭包/index.html">
+<meta property="og:title" content="闭包">
+<meta property="og:url" content="http://alitter.xin/root/2017/08/14/闭包/index.html">
 <meta property="og:site_name" content="一方水土">
-<meta property="og:description" content="javascrite第五天闭包闭包是什么? 封闭起来的包裹； 一个具有封闭的对外不公开的, 包裹结构, 或空间.     123function fn1()&amp;#123;  function fn2()&amp;#123;&amp;#125;&amp;#125; 闭包能用来干什么？ 1.延长变量的生命周期； 2.变量的封装，对外提供有限的访问、修改 ；权限（避免肆意的修改）；  闭包存在的问题 由于延长了变量的生命周期(没">
-<meta property="og:updated_time" content="2017-07-29T11:03:47.292Z">
+<meta property="og:description" content="闭包闭包是什么? 封闭起来的包裹； 一个具有封闭的对外不公开的, 包裹结构, 或空间.     123function fn1()&amp;#123;  function fn2()&amp;#123;&amp;#125;&amp;#125; 闭包能用来干什么？ 1.延长变量的生命周期； 2.变量的封装，对外提供有限的访问、修改 ；权限（避免肆意的修改）；  闭包存在的问题 由于延长了变量的生命周期(没有被及时回收);造成了内存">
+<meta property="og:updated_time" content="2017-09-01T08:02:47.357Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一方水土">
-<meta name="twitter:description" content="javascrite第五天闭包闭包是什么? 封闭起来的包裹； 一个具有封闭的对外不公开的, 包裹结构, 或空间.     123function fn1()&amp;#123;  function fn2()&amp;#123;&amp;#125;&amp;#125; 闭包能用来干什么？ 1.延长变量的生命周期； 2.变量的封装，对外提供有限的访问、修改 ；权限（避免肆意的修改）；  闭包存在的问题 由于延长了变量的生命周期(没">
+<meta name="twitter:title" content="闭包">
+<meta name="twitter:description" content="闭包闭包是什么? 封闭起来的包裹； 一个具有封闭的对外不公开的, 包裹结构, 或空间.     123function fn1()&amp;#123;  function fn2()&amp;#123;&amp;#125;&amp;#125; 闭包能用来干什么？ 1.延长变量的生命周期； 2.变量的封装，对外提供有限的访问、修改 ；权限（避免肆意的修改）；  闭包存在的问题 由于延长了变量的生命周期(没有被及时回收);造成了内存">
 
 
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/blog.github.io/',
+    root: '/root/',
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/Wavedot/blog.github.io/2017/08/14/闭包/"/>
+  <link rel="canonical" href="http://alitter.xin/root/2017/08/14/闭包/"/>
 
 
 
 
 
-  <title> | 一方水土</title>
+  <title>闭包 | 一方水土</title>
   
 
 
@@ -170,7 +171,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/blog.github.io/"  class="brand" rel="start">
+      <a href="/root/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">一方水土</span>
         <span class="logo-line-after"><i></i></span>
@@ -198,7 +199,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/blog.github.io/" rel="section">
+          <a href="/root/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -208,7 +209,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/blog.github.io/categories/" rel="section">
+          <a href="/root/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -218,7 +219,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/blog.github.io/about/" rel="section">
+          <a href="/root/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -228,7 +229,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/blog.github.io/archives/" rel="section">
+          <a href="/root/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -238,7 +239,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/blog.github.io/tags/" rel="section">
+          <a href="/root/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -275,12 +276,12 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Wavedot/blog.github.io/blog.github.io/2017/08/14/闭包/">
+    <link itemprop="mainEntityOfPage" href="http://alitter.xin/root/root/2017/08/14/闭包/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wave">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog.github.io/images/avatar.gif">
+      <meta itemprop="image" content="/root/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -292,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">闭包</h1>
         
 
         <div class="post-meta">
@@ -314,6 +315,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/root/categories/learn/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -339,7 +362,7 @@
       
 
       
-        <h1 id="javascrite第五天"><a href="#javascrite第五天" class="headerlink" title="javascrite第五天"></a>javascrite第五天</h1><h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><h4 id="闭包是什么"><a href="#闭包是什么" class="headerlink" title="闭包是什么?"></a>闭包是什么?</h4><blockquote>
+        <h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><h4 id="闭包是什么"><a href="#闭包是什么" class="headerlink" title="闭包是什么?"></a>闭包是什么?</h4><blockquote>
 <p>封闭起来的包裹； <strong>一个具有封闭的对外不公开的, 包裹结构, 或空间.</strong>   </p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -392,6 +415,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/root/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
 
       
       
@@ -401,7 +430,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog.github.io/2017/08/14/this的含义及沙箱模式/" rel="next" title="js高级">
+              <a href="/root/2017/08/14/this的含义及沙箱模式/" rel="next" title="js高级">
                 <i class="fa fa-chevron-left"></i> js高级
               </a>
             
@@ -411,8 +440,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog.github.io/2017/08/14/递归/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/root/2017/08/14/递归/" rel="prev" title="递归">
+                递归 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -474,7 +503,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/blog.github.io/images/avatar.gif"
+               src="/root/images/avatar.gif"
                alt="wave" />
           <p class="site-author-name" itemprop="name">wave</p>
            
@@ -485,7 +514,7 @@
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/blog.github.io/archives/">
+              <a href="/root/archives/">
                 <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
@@ -496,7 +525,7 @@
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/blog.github.io/categories/index.html">
+              <a href="/root/categories/index.html">
                 <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
@@ -507,8 +536,8 @@
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/blog.github.io/tags/index.html">
-                <span class="site-state-item-count">3</span>
+              <a href="/root/tags/index.html">
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -543,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascrite第五天"><span class="nav-number">1.</span> <span class="nav-text">javascrite第五天</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包"><span class="nav-number">1.1.</span> <span class="nav-text">闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包是什么"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">闭包是什么?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包能用来干什么？"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">闭包能用来干什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包存在的问题"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">闭包存在的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包能否滥用"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">闭包能否滥用?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包用在什么地方"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">闭包用在什么地方?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包解决问题实例1、点击事件"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">闭包解决问题实例1、点击事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包解决问题实例2、定时器"><span class="nav-number">1.1.0.7.</span> <span class="nav-text">闭包解决问题实例2、定时器</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包"><span class="nav-number">1.</span> <span class="nav-text">闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包是什么"><span class="nav-number">1.0.1.</span> <span class="nav-text">闭包是什么?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包能用来干什么？"><span class="nav-number">1.0.2.</span> <span class="nav-text">闭包能用来干什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包存在的问题"><span class="nav-number">1.0.3.</span> <span class="nav-text">闭包存在的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包能否滥用"><span class="nav-number">1.0.4.</span> <span class="nav-text">闭包能否滥用?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包用在什么地方"><span class="nav-number">1.0.5.</span> <span class="nav-text">闭包用在什么地方?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包解决问题实例1、点击事件"><span class="nav-number">1.0.6.</span> <span class="nav-text">闭包解决问题实例1、点击事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#闭包解决问题实例2、定时器"><span class="nav-number">1.0.7.</span> <span class="nav-text">闭包解决问题实例2、定时器</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -631,53 +660,53 @@
 
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/root/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/root/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/root/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/root/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/root/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/blog.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/blog.github.io/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/blog.github.io/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/blog.github.io/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/blog.github.io/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
-
-  
-  <script type="text/javascript" src="/blog.github.io/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/blog.github.io/js/src/post-details.js?v=5.1.1"></script>
-
+  <script type="text/javascript" src="/root/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/blog.github.io/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/root/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/root/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/root/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/root/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/root/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/root/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/root/js/src/bootstrap.js?v=5.1.1"></script>
 
 
 
